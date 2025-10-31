@@ -18,6 +18,18 @@
             "playlists": [
                 "68f526c4ec1ea2ad00a6fae8"
             ]
+        },
+        {
+            "firstName": "Matthew",
+            "lastName": "Daos",
+            "email": "matthew@daos.com",
+            "passwordHash": "$2a$10$dPEwsAVi1ojv2RfxxTpZjuKSAbep7zEKb5myegm.ATbQ4sJk4agGu",
+            "playlists": [
+                "68e9216a014634e25e80bb83",
+                "68e9216a014634e25e80bb84",
+                "68e9216a014634e25e80bb85"
+            ]
+
         }
     ],
     "playlists": [
@@ -207,6 +219,393 @@
                     "artist": "The Clash",
                     "year": 1979,
                     "youTubeId": "uEK9oK02D1M"
+                }
+            ]
+        },
+        {
+            "_id": "68e9216a014634e25e80bb83",
+            "ownerEmail": "matthew@daos.com",
+            "name": "Old Classics",
+            "songs": [
+                {
+                    "title": "Otso Otso",
+                    "artist": "Bayani Agbayani",
+                    "year": 2004,
+                    "youTubeId": "sDGNTj5588Q"
+                },
+                { 
+                    "title": "Down", 
+                    "artist": "Jay Sean",
+                    "year": 2009,
+                    "youTubeId": "5Ztx_68OJmQ" 
+                },
+                {
+                    "title": "Steal My Girl",
+                    "artist": "One Direction",
+                    "year": 2014,
+                    "youTubeId": "sahsquWlw5I"
+                },
+                {
+                    "title": "Baby",
+                    "artist": "Justin Bieber",
+                    "year": 2010,
+                    "youTubeId": "kffacxfA7G4"
+                },
+                {
+                    "title": "Lemonade - Ukelele Version",
+                    "artist": "Jeremy Passion",
+                    "year": 2011,
+                    "youTubeId": "Vd9_kJkGcGs"
+                },
+                {
+                    "title": "Promiscuous",
+                    "artist": "Nelly Furtado",
+                    "year": 2006,
+                    "youTubeId": "VXPvpK2ct4M"
+                },
+                {
+                    "title": "The One That Got Away",
+                    "artist": "Katy Perry",
+                    "year": 2010,
+                    "youTubeId": "ePQe5E69INg"
+                },
+                {
+                    "title": "On The Floor",
+                    "artist": "Jennifer Lopez",
+                    "year": 2011,
+                    "youTubeId": "9lybsz-7TFM"
+                },
+                {
+                    "title": "Locked out of Heaven",
+                    "artist": "Bruno Mars",
+                    "year": 2012,
+                    "youTubeId": "e-fA-gBCkj0"
+                },
+                {
+                    "title": "Dancing Queen",
+                    "artist": "ABBA",
+                    "year": 1976,
+                    "youTubeId": "-sVB91NTa4A"
+                },
+                {
+                    "title": "Big Poppa",
+                    "artist": "The Notorious B.I.G.",
+                    "year": 2007,
+                    "youTubeId": "QceVTChhlJM"
+                },
+                {
+                    "title": "Careless Whisper",
+                    "artist": "George Michael",
+                    "year": 1998,
+                    "youTubeId": "izGwDsrQ1eQ"
+                },
+                {
+                    "title": "Can't Help Falling In Love",
+                    "artist": "Elvis Presley",
+                    "year": 1971,
+                    "youTubeId": "vGJTaP6anOU"
+                },
+                {
+                    "title": "Can't Take My Eyes off You",
+                    "artist": "Frankie Valli",
+                    "year": 1967,
+                    "youTubeId": "DYwQy_9JPtQ"
+                },
+                {
+                    "title": "Come Back - Buddha Remastered 2001",
+                    "artist": "The Five Stairsteps",
+                    "year": 2001,
+                    "youTubeId": "i9VjTIryn6s"
+                },
+                {
+                    "title": "Lover, You Shouldn't Come Over",
+                    "artist": "Jeff Buckley",
+                    "year": 1994,
+                    "youTubeId": "HxfE6PJmGS8"
+                },
+                {
+                    "title": "Kiss Me Thru The Phone",
+                    "artist": "Soulja Boy",
+                    "year": 2008,
+                    "youTubeId": "47Fbo4kU2AU"
+                },
+                {
+                    "title": "All I Ask",
+                    "artist": "Adele",
+                    "year": 2015,
+                    "youTubeId": "sonzlE32YVg"
+                },
+                {
+                    "title": "Outside",
+                    "artist": "Calvin Harris",
+                    "year": 2014,
+                    "youTubeId": "MjEYCUJuh-g"
+                },
+                {
+                    "title": "Beer",
+                    "artist": "The Itchyworms",
+                    "year": 2005,
+                    "youTubeId": "OIL2vgS1amk"
+                }
+            ]
+        },
+        {
+            "_id": "68e9216a014634e25e80bb84",
+            "ownerEmail": "matthew@daos.com",
+            "name": "Favorite Songs",
+            "songs": [
+                {
+                    "title": "IGOR'S THEME",
+                    "artist": "Tyler, The Creator",
+                    "year": 2019,
+                    "youTubeId": "6S20mJvr4vs"
+                },
+                { 
+                    "title": "I THINK", 
+                    "artist": "Tyler, The Creator",
+                    "year": 2019,
+                    "youTubeId": "m91Vq-Yd3BA" 
+                },
+                {
+                    "title": "Watching Him Fade Away",
+                    "artist": "Mac DeMarco",
+                    "year": 2017,
+                    "youTubeId": "x8cFcSq4EIs"
+                },
+                {
+                    "title": "Above the Chinese Restaurant",
+                    "artist": "Laufey",
+                    "year": 2022,
+                    "youTubeId": "tz_dkwUq7b0"
+                },
+                {
+                    "title": "Magnolia",
+                    "artist": "Laufey",
+                    "year": 2021,
+                    "youTubeId": "26H76PJWnmA"
+                },
+                {
+                    "title": "Everything I Know About Love",
+                    "artist": "Laufey",
+                    "year": 2022,
+                    "youTubeId": "UCsEvOvzDUU"
+                },
+                {
+                    "title": "While You Were Sleeping",
+                    "artist": "Laufey",
+                    "year": 2023,
+                    "youTubeId": "CEF3DziDIIs"
+                },
+                {
+                    "title": "Sienna",
+                    "artist": "The Marias",
+                    "year": 2024,
+                    "youTubeId": "EiS7cKfuf6w"
+                },
+                {
+                    "title": "No One Noticed",
+                    "artist": "The Marias",
+                    "year": 2024,
+                    "youTubeId": "Qn8F_u0vBNI"
+                },
+                {
+                    "title": "EVERYTHING",
+                    "artist": "The Black Skirts",
+                    "year": 2017,
+                    "youTubeId": "ITnT4L988G0"
+                },
+                {
+                    "title": "Always",
+                    "artist": "Daniel Caesar",
+                    "year": 2023,
+                    "youTubeId": "pKFd12id5oQ"
+                },
+                {
+                    "title": "She",
+                    "artist": "Tyler, The Creator",
+                    "year": 2011,
+                    "youTubeId": "Pq-rnvMn5XA"
+                },
+                {
+                    "title": "Ivy",
+                    "artist": "Frank Ocean",
+                    "year": 2016,
+                    "youTubeId": "AE005nZeF-A"
+                },
+                {
+                    "title": "30 For 30",
+                    "artist": "SZA",
+                    "year": 2024,
+                    "youTubeId": "NEnephbahLA"
+                },
+                {
+                    "title": "Sunflower",
+                    "artist": "Rex Orange County",
+                    "year": 2017,
+                    "youTubeId": "V0X-SWiDr1g"
+                },
+                {
+                    "title": "Noid",
+                    "artist": "Tyler, The Creator",
+                    "year": 2024,
+                    "youTubeId": "cnW6UTt4tyQ"
+                },
+                {
+                    "title": "St. Chroma",
+                    "artist": "Tyler, The Creator",
+                    "year": 2024,
+                    "youTubeId": "9RuII0Ej2lk"
+                },
+                {
+                    "title": "ARE WE STILL FRIENDS?",
+                    "artist": "Tyler, The Creator",
+                    "year": 2019,
+                    "youTubeId": "VMFJwSR1MQQ"
+                },
+                {
+                    "title": "Let It Happen",
+                    "artist": "Tame Impala",
+                    "year": 2017,
+                    "youTubeId": "-ed6UeDp1ek"
+                },
+                {
+                    "title": "Dark Red",
+                    "artist": "Steve Lacy",
+                    "year": 2017,
+                    "youTubeId": "xRzbLQ_WKPs"
+                }
+            ]
+        },
+        {
+            "_id": "68e9216a014634e25e80bb85",
+            "ownerEmail":"matthew@daos.com",
+            "name": "Interesting Songs",
+            "songs": [
+                {
+                    "title": "Strategy",
+                    "artist": "TWICE",
+                    "year": 2024,
+                    "youTubeId": "nmbiBVPe5bY"
+                },
+                { 
+                    "title": "How It's Done", 
+                    "artist": "HUNTR/X",
+                    "year": 2025,
+                    "youTubeId": "QGsevnbItdU" 
+                },
+                {
+                    "title": "Someday Faraway",
+                    "artist": "Labit",
+                    "year": 2024,
+                    "youTubeId": "hckmzgC45Us"
+                },
+                {
+                    "title": "Duvet",
+                    "artist": "Bôa",
+                    "year": 2001,
+                    "youTubeId": "Uoox9fpmDP0"
+                },
+                {
+                    "title": "Mr. Eclectic",
+                    "artist": "Laufey",
+                    "year": 2025,
+                    "youTubeId": "EIZr5AXenVw"
+                },
+                {
+                    "title": "Sugar On My Tongue",
+                    "artist": "Tyler, The Creator",
+                    "year": 2025,
+                    "youTubeId": "ph-8t5vXGsE"
+                },
+                {
+                    "title": "PANIC!!!",
+                    "artist": "Paris Texas",
+                    "year": 2023,
+                    "youTubeId": "eIZWdvfTMxc"
+                },
+                {
+                    "title": "like JENNIE",
+                    "artist": "JENNIE",
+                    "year": 2025,
+                    "youTubeId": "aS7al94FVbk"
+                },
+                {
+                    "title": "HBA",
+                    "artist": "Playboi Carti",
+                    "year": 2025,
+                    "youTubeId": "QTLqujvTGrg"
+                },
+                {
+                    "title": "Thick of It",
+                    "artist": "KSI",
+                    "year": 2024,
+                    "youTubeId": "At8v_Yc044Y"
+                },
+                {
+                    "title": "CRAZY",
+                    "artist": "LE SSERAFIM",
+                    "year": 2024,
+                    "youTubeId": "n6B5gQXlB-0"
+                },
+                {
+                    "title": "J A K U R A",
+                    "artist": "jasontheween",
+                    "year": 2025,
+                    "youTubeId": "NjQJBSeyWDs"
+                },
+                {
+                    "title": "Not Allowed",
+                    "artist": "TV Girl",
+                    "year": 2016,
+                    "youTubeId": "r0xTqwKMOyk"
+                },
+                {
+                    "title": "Magnetic",
+                    "artist": "ILLIT",
+                    "year": 2024,
+                    "youTubeId": "YVMUjAE-0SM"
+                },
+                {
+                    "title": "ETA",
+                    "artist": "NewJeans",
+                    "year": 2023,
+                    "youTubeId": "2u_kncwzJ5Y"
+                },
+                {
+                    "title": "beans",
+                    "artist": "yawn.",
+                    "year": 2025,
+                    "youTubeId": "LwUL3T8Zylk"
+                },
+                {
+                    "title": "Dancing with my phone",
+                    "artist": "HYBS",
+                    "year": 2022,
+                    "youTubeId": "ZQ7QtBtjGUE"
+                },
+                {
+                    "title": "Golden",
+                    "artist": "HUNTR/X",
+                    "year": 2025,
+                    "youTubeId": "9_bTl2vvYQg"
+                },
+                {
+                    "title": "TAKEDOWN",
+                    "artist": "TWICE",
+                    "year": 2025,
+                    "youTubeId": "7XRcflf_E0c"
+                },
+                {
+                    "title": "Who Hurt You?",
+                    "artist": "Daniel Caesar",
+                    "year": 2018,
+                    "youTubeId": "KQuIZzgDkfg"
+                },
+                {
+                    "title": "Nice Shoes",
+                    "artist": "Steve Lacy",
+                    "year": 2025,
+                    "youTubeId": "-p7B8EKRRNc"
                 }
             ]
         }
