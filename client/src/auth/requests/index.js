@@ -10,11 +10,39 @@
     @author McKilla Gorilla
 */
 
-import axios from 'axios'
-axios.defaults.withCredentials = true;
-const api = axios.create({
-    baseURL: 'http://localhost:4000/auth',
-})
+const BASE_URL = 'http://localhost:4000/auth';
+
+async function handleResponse(response) {
+    const type = response.headers.get('content-type');
+    const hasJson = type && type.includes('application/json');
+    const data = hasJson ? await response.json() : null;
+
+    if(!response.ok) {
+        const error = (data && data.errorMessage) || response.statusText;
+        return Promise.reject({ response: { status: response.status, data: { errorMessage: error } } });
+    }
+
+    return {
+        status: response.status,
+        data: data
+    };
+}
+
+function createFetchOptions(method, body=null) {
+    const options = {
+        method: method,
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+
+    if (body) {
+        options.body = JSON.stringify(body);
+    }
+
+    return options;
+}
 
 // THESE ARE ALL THE REQUESTS WE`LL BE MAKING, ALL REQUESTS HAVE A
 // REQUEST METHOD (like get) AND PATH (like /register). SOME ALSO
@@ -23,23 +51,35 @@ const api = axios.create({
 // WE NEED TO PUT THINGS INTO THE DATABASE OR IF WE HAVE SOME
 // CUSTOM FILTERS FOR QUERIES
 
-export const getLoggedIn = () => api.get(`/loggedIn/`);
-export const loginUser = (email, password) => {
-    return api.post(`/login/`, {
-        email : email,
-        password : password
-    })
+export const getLoggedIn = async () => {
+    const response = await fetch(`${BASE_URL}/loggedIn/`, createFetchOptions('GET'));
+    return handleResponse(response);
 }
-export const logoutUser = () => api.get(`/logout/`)
-export const registerUser = (firstName, lastName, email, password, passwordVerify) => {
-    return api.post(`/register/`, {
-        firstName : firstName,
-        lastName : lastName,
-        email : email,
-        password : password,
-        passwordVerify : passwordVerify
-    })
+export const loginUser = async (email, password) => {
+    const response = await fetch(`${BASE_URL}/login/`, createFetchOptions('POST', {
+        // SPECIFY THE PAYLOAD
+        email: email,
+        password: password
+    }));
+    return handleResponse(response);
 }
+
+export const logoutUser = async () => {
+    const response = await fetch(`${BASE_URL}/logout/`, createFetchOptions('GET'));
+    return handleResponse(response);
+}
+
+export const registerUser = async (firstName, lastName, email, password, passwordVerify) => {
+    const response = await fetch(`${BASE_URL}/register/`, createFetchOptions('POST', {
+        // SPECIFY THE PAYLOAD
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+        passwordVerify: passwordVerify
+    }));
+}
+
 const apis = {
     getLoggedIn,
     registerUser,
