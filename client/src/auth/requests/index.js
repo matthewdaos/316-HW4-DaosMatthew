@@ -78,6 +78,7 @@ export const registerUser = async (firstName, lastName, email, password, passwor
         password: password,
         passwordVerify: passwordVerify
     }));
+    return handleResponse(response);
 }
 
 const apis = {
