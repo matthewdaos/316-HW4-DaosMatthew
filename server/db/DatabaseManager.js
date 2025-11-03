@@ -17,7 +17,7 @@ class DatabaseManager {
     }
 
     async createUser({firstName, lastName, email, passwordHash}) {
-        throw new Error("disconnect() not implemented");
+        throw new Error("createUser not implemented");
     }
 
     async createUserPlaylist(userId, playlistData) {
@@ -36,7 +36,11 @@ class DatabaseManager {
         throw new Error("getPlaylistPairs not implemeneted");
     }
 
-    async updatePlaylist(userId, playlistId, updateData) {
+    async getAllPlaylists() {
+        throw new Error("getAllPlaylists not implemented");
+    }
+
+    async updateUserPlaylist(userId, playlistId, updateData) {
         throw new Error("updatedPlaylist not implemented");
     }
 }
