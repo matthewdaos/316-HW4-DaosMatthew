@@ -1,33 +1,9 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const DatabaseManager = require('../DatabaseManager')
+const DatabaseManager = require('../DatabaseManager');
+const PlaylistModel = require('../../models/playlist-model');
+const UserModel = require('../../models/user-model');
 dotenv.config();
-
-
-const Schema = mongoose.Schema;
-const ObjectId = Schema.Types.ObjectId;
-
-const PlaylistSchema = new Schema({
-    name: { type: String, required: true },
-    ownerEmail: { type: String, required: true },
-    song: [{
-        title: String,
-        artist: String,
-        year: Number,
-        youTubeId: String
-    }]
-}, { timestamps: true });
-
-const UserSchema = new Schema({
-    firstName: { type: String, required: true },
-    lastName: { type: String, required: true },
-    email: { type: String, required: true },
-    passwordHash: { type: String, required: true },
-    playlists: [{ type: ObjectId, ref: 'Playlist' }]
-}, { timestamps: true });
-
-const PlaylistModel = mongoose.model('Playlist', PlaylistSchema);
-const UserModel = mongoose.model('User', UserSchema);
 
 class MongoDatabaseManager extends DatabaseManager {
     async connect() {
@@ -124,7 +100,7 @@ class MongoDatabaseManager extends DatabaseManager {
         return playlists;
     }
 
-    async updatePlaylist(userId, playlistId, updateData) {
+    async updateUserPlaylist(userId, playlistId, updateData) {
         const list = await PlaylistModel.findOne({ _id: playlistId });
         if(!list) return { ok: false, reason: "not found" };
 
