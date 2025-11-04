@@ -1,15 +1,19 @@
-
-const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 dotenv.config();
 
-mongoose
-    .connect(process.env.DB_CONNECT, { useNewUrlParser: true })
-    .catch(e => {
-        console.error('Connection error', e.message)
-    })
+const MongoDatabaseManager = require('./mongodb');
+const PostgresDatabaseManager = require('./postgresql');
+let dbManager;
 
-const db = mongoose.connection
+switch(process.env.DB_TYPE) {
+    case 'postgresql':
+        dbManager = new PostgresDatabaseManager();
+        break;
+    case 'mongo':
+    default: 
+        dbManager = new MongoDatabaseManager();
+        break;
+}
 
-module.exports = db
+module.exports = dbManager
 
