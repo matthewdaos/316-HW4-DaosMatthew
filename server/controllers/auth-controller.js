@@ -13,7 +13,7 @@ getLoggedIn = async (req, res) => {
             })
         }
 
-        const loggedInUser = await dbManager.getUserById({ _id: userId });
+        const loggedInUser = await dbManager.getUserId({ _id: userId });
         console.log("getLoggedIn")
         if(!loggedInUser) {
             return res.status(200).json({
