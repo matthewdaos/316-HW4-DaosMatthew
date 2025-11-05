@@ -43,7 +43,7 @@ class PostgresDatabaseManager extends DatabaseManager {
             title: DataTypes.STRING,
             artist: DataTypes.STRING,
             year: DataTypes.INTEGER,
-            youtubeId: DataTypes.STRING,
+            youTubeId: DataTypes.STRING,
             index: DataTypes.INTEGER
         }, {
             tableName: 'songs'
@@ -105,7 +105,7 @@ class PostgresDatabaseManager extends DatabaseManager {
         for(let i = 0; i < playlistData.songs.length; i++) {
             const s = playlistData.songs[i];
             await this.Song.create({
-                playlist: p.id,
+                playlistId: p.id,
                 title: s.title,
                 artist: s.artist,
                 year: s.year,
