@@ -19,11 +19,11 @@ class MongoDatabaseManager extends DatabaseManager {
     }
 
     async getUserEmail(email) {
-        return await UserModel.findOne({ email: email });
+        return await UserModel.findOne({ email });
     }
 
     async getUserId(userId) {
-        return await UserModel.findOne({ _id: userId});
+        return await UserModel.findById(userId);
     }
 
     async createUser({ firstName, lastName, email, passwordHash}) {
@@ -51,32 +51,32 @@ class MongoDatabaseManager extends DatabaseManager {
     }
 
     async deletePlaylist(userId, playlistId) {
-        const playlist = await PlaylistModel.findById({ _id: playlistId });
+        const playlist = await PlaylistModel.findById(playlistId);
         if(!playlist) return { ok: false, reason: "not found" };
 
-        const owner = await UserModel.findOne({ email: playlist.ownerEmail });
-        if(!owner || owner._id.toString() !== userId.toString()) {
-            return { ok: false, reason: "unauthorized" };
-        }
+        const user = await UserModel.findById(userId);
+        if (!user) return { ok: false, reason: "unauthorized" };
 
-        await PlaylistModel.findOneAndDelete({ _id: playlistId });
+        const ownsIt = user.playlists.some(pid => String(pid) === String(playlistId));
+        if (!ownsIt) return { ok: false, reason: "unauthorized" };
 
-        owner.playlists = owner.playlists.filter(
-            pid => pid.toString() !== playlistId.toString()
-        );
-        await owner.save();
+        user.playlists = user.playlists.filter(pid => String(pid) !== String(playlistId));
+        await user.save();
+
+        await PlaylistModel.findByIdAndDelete(playlistId);
 
         return { ok: true };
     }
 
     async getPlaylistId(userId, playlistId) {
-        const list = await PlaylistModel.findById({ _id: playlistId });
+        const list = await PlaylistModel.findById(playlistId);
         if(!list) return null;
 
-        const owner = await UserModel.findOne({ email: list.ownerEmail });
-        if(!owner || owner._id.toString() !== userId.toString()) {
-            return null;
-        }
+        const user = await UserModel.findById(userId);
+        if (!user) return null;
+
+        const ownsIt = user.playlists.some(pid => String(pid) === String(playlistId));
+        if (!ownsIt) return null;
 
         return list;
     }
@@ -101,13 +101,14 @@ class MongoDatabaseManager extends DatabaseManager {
     }
 
     async updateUserPlaylist(userId, playlistId, updateData) {
-        const list = await PlaylistModel.findOne({ _id: playlistId });
+        const list = await PlaylistModel.findById(playlistId);
         if(!list) return { ok: false, reason: "not found" };
 
-        const owner = await UserModel.findOne({ email: list.ownerEmail });
-        if(!owner || owner._id.toString() !== userId.toString()) {
-            return { ok: false, reason: "unauthorized" };
-        }
+        const user = await UserModel.findById(userId);
+        if (!user) return { ok: false, reason: "unauthorized" };
+
+        const ownsIt = user.playlists.some(pid => String(pid) === String(playlistId));
+        if (!ownsIt) return { ok: false, reason: "unauthorized" };
 
         list.name = updateData.name;
         list.songs = updateData.songs;
