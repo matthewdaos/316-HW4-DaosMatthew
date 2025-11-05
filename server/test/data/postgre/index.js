@@ -63,6 +63,7 @@ async function resetPostgre() {
     console.log("Resetting PostgresSQL DB");
 
     const mgr = new PostgresDatabaseManager();
+    await mgr.connect();
 
     await resetTables(mgr);
 
